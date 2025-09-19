@@ -9,19 +9,19 @@ import xlrd, xlwt
 from xlutils.copy import copy as xl_copy
 
 CurrentFolder = os.getcwd() #Read current folder path
-image = CurrentFolder+'\\rahul.png'
-image2 = CurrentFolder+'\\sneha.png'
+image = CurrentFolder+'\\nikhil.png'
+image2 = CurrentFolder+'\\gaurav.png'
 
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-person1_name = "Rahul"
+person1_name = "Nikhil"
 person1_image = face_recognition.load_image_file(image)
 person1_face_encoding = face_recognition.face_encodings(person1_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-person2_name = "sneha"
+person2_name = "Gaurav"
 person2_image = face_recognition.load_image_file(image2)
 person2_face_encoding = face_recognition.face_encodings(person2_image)[0]
 
@@ -126,4 +126,5 @@ while True:
 # Release handle to the webcam
 video_capture.release()
 cv2.destroyAllWindows()
+
 
